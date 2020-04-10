@@ -7,7 +7,7 @@
 int main()
 {
     Memory mem;
-    mem.LoadElf("../program");
+    mem.LoadElf("program");
     Cpu cpu{mem};
     cpu.Reset(0x200);
 
