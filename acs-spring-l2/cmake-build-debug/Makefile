@@ -123,6 +123,19 @@ riscv_sim/fast:
 	$(MAKE) -f CMakeFiles/riscv_sim.dir/build.make CMakeFiles/riscv_sim.dir/build
 .PHONY : riscv_sim/fast
 
+#=============================================================================
+# Target rules for targets named units_run
+
+# Build rule for target.
+units_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 units_run
+.PHONY : units_run
+
+# fast build rule for target.
+units_run/fast:
+	$(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/build
+.PHONY : units_run/fast
+
 src/Instruction.o: src/Instruction.cpp.o
 
 .PHONY : src/Instruction.o
@@ -186,6 +199,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... riscv_sim"
 	@echo "... edit_cache"
+	@echo "... units_run"
 	@echo "... src/Instruction.o"
 	@echo "... src/Instruction.i"
 	@echo "... src/Instruction.s"

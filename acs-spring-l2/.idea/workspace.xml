@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="riscv_sim" targetName="units_run" />
       <config projectName="riscv_sim" targetName="riscv_sim" />
     </generated>
   </component>
@@ -37,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/untitled" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/units" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -45,13 +46,19 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.riscv_sim">
-    <configuration name="Example" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="riscv_sim" TARGET_NAME="Boost_Tests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="riscv_sim" RUN_TARGET_NAME="Boost_Tests_run" TEST_CLASS="TesstDecoderCheckSuit" TEST_METHOD="Example" TEST_MODE="SUITE_TEST">
+    <configuration name="TesstDecoderCheckSuit" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="riscv_sim" TARGET_NAME="Boost_Tests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="riscv_sim" RUN_TARGET_NAME="Boost_Tests_run" TEST_CLASS="TesstDecoderCheckSuit" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TesstDecoderCheckSuit" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="riscv_sim" TARGET_NAME="Boost_Tests_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="riscv_sim" RUN_TARGET_NAME="Boost_Tests_run" TEST_CLASS="TesstDecoderCheckSuit" TEST_MODE="SUITE_TEST">
+    <configuration name="Decoder Test Case" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="riscv_sim" TARGET_NAME="units_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="riscv_sim" RUN_TARGET_NAME="units_run" TEST_METHOD="Decoder Test Case" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Executor Test Case" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="riscv_sim" TARGET_NAME="units_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="riscv_sim" RUN_TARGET_NAME="units_run" TEST_METHOD="Executor Test Case" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -76,17 +83,19 @@
     </configuration>
     <list>
       <item itemvalue="Boost.Test.TesstDecoderCheckSuit" />
-      <item itemvalue="Boost.Test.Example" />
       <item itemvalue="Catch.First test" />
       <item itemvalue="Catch.First one" />
+      <item itemvalue="Catch.Decoder Test Case" />
+      <item itemvalue="Catch.Executor Test Case" />
       <item itemvalue="CMake Application.riscv_sim" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Catch.Executor Test Case" />
+        <item itemvalue="Catch.Decoder Test Case" />
         <item itemvalue="Catch.First one" />
         <item itemvalue="Catch.First test" />
         <item itemvalue="Boost.Test.TesstDecoderCheckSuit" />
-        <item itemvalue="Boost.Test.Example" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +115,8 @@
       <workItem from="1586431922499" duration="14891000" />
       <workItem from="1586455338881" duration="697000" />
       <workItem from="1586456047573" duration="13860000" />
-      <workItem from="1586502979133" duration="30951000" />
+      <workItem from="1586502979133" duration="34257000" />
+      <workItem from="1586544961636" duration="4788000" />
     </task>
     <servers />
   </component>
@@ -130,37 +140,41 @@
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
     <state x="712" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1859.1053@0.27.1859.1053" timestamp="1586531281490" />
-    <state width="1813" height="127" key="GridCell.Tab.0.bottom" timestamp="1586540337689">
+    <state width="1813" height="365" key="GridCell.Tab.0.bottom" timestamp="1586554273761">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="127" key="GridCell.Tab.0.bottom/0.27.1859.1053@0.27.1859.1053" timestamp="1586540337689" />
-    <state width="1813" height="127" key="GridCell.Tab.0.center" timestamp="1586540337689">
+    <state width="1813" height="365" key="GridCell.Tab.0.bottom/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273761" />
+    <state width="1813" height="365" key="GridCell.Tab.0.center" timestamp="1586554273761">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="127" key="GridCell.Tab.0.center/0.27.1859.1053@0.27.1859.1053" timestamp="1586540337689" />
-    <state width="1813" height="127" key="GridCell.Tab.0.left" timestamp="1586540337688">
+    <state width="1813" height="365" key="GridCell.Tab.0.center/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273761" />
+    <state width="1813" height="365" key="GridCell.Tab.0.left" timestamp="1586554273761">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="127" key="GridCell.Tab.0.left/0.27.1859.1053@0.27.1859.1053" timestamp="1586540337688" />
-    <state width="1813" height="127" key="GridCell.Tab.0.right" timestamp="1586540337689">
+    <state width="1813" height="365" key="GridCell.Tab.0.left/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273761" />
+    <state width="1813" height="365" key="GridCell.Tab.0.right" timestamp="1586554273761">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="127" key="GridCell.Tab.0.right/0.27.1859.1053@0.27.1859.1053" timestamp="1586540337689" />
-    <state width="1813" height="167" key="GridCell.Tab.1.bottom" timestamp="1586534418870">
+    <state width="1813" height="365" key="GridCell.Tab.0.right/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273761" />
+    <state width="1813" height="365" key="GridCell.Tab.1.bottom" timestamp="1586554273762">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="167" key="GridCell.Tab.1.bottom/0.27.1859.1053@0.27.1859.1053" timestamp="1586534418870" />
-    <state width="1813" height="167" key="GridCell.Tab.1.center" timestamp="1586534418868">
+    <state width="1813" height="365" key="GridCell.Tab.1.bottom/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273762" />
+    <state width="1813" height="365" key="GridCell.Tab.1.center" timestamp="1586554273762">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="167" key="GridCell.Tab.1.center/0.27.1859.1053@0.27.1859.1053" timestamp="1586534418868" />
-    <state width="1813" height="167" key="GridCell.Tab.1.left" timestamp="1586534418868">
+    <state width="1813" height="365" key="GridCell.Tab.1.center/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273762" />
+    <state width="1813" height="365" key="GridCell.Tab.1.left" timestamp="1586554273761">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="167" key="GridCell.Tab.1.left/0.27.1859.1053@0.27.1859.1053" timestamp="1586534418868" />
-    <state width="1813" height="167" key="GridCell.Tab.1.right" timestamp="1586534418869">
+    <state width="1813" height="365" key="GridCell.Tab.1.left/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273761" />
+    <state width="1813" height="365" key="GridCell.Tab.1.right" timestamp="1586554273762">
       <screen x="0" y="27" width="1859" height="1053" />
     </state>
-    <state width="1813" height="167" key="GridCell.Tab.1.right/0.27.1859.1053@0.27.1859.1053" timestamp="1586534418869" />
+    <state width="1813" height="365" key="GridCell.Tab.1.right/0.27.1859.1053@0.27.1859.1053" timestamp="1586554273762" />
+    <state x="592" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1586546320254">
+      <screen x="0" y="27" width="1859" height="1053" />
+    </state>
+    <state x="592" y="257" width="672" height="678" key="search.everywhere.popup/0.27.1859.1053@0.27.1859.1053" timestamp="1586546320254" />
   </component>
 </project>

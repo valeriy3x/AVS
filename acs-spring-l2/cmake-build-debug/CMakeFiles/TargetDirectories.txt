@@ -1,3 +1,6 @@
 /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles/riscv_sim.dir
 /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/units/CMakeFiles/rebuild_cache.dir
+/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/units/CMakeFiles/units_run.dir
+/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/units/CMakeFiles/edit_cache.dir

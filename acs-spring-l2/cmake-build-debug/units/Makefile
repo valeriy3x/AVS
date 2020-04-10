@@ -152,6 +152,33 @@ test_decoder.cpp.s:
 	cd /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug && $(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/test_decoder.cpp.s
 .PHONY : test_decoder.cpp.s
 
+test_executor.o: test_executor.cpp.o
+
+.PHONY : test_executor.o
+
+# target to build an object file
+test_executor.cpp.o:
+	cd /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug && $(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/test_executor.cpp.o
+.PHONY : test_executor.cpp.o
+
+test_executor.i: test_executor.cpp.i
+
+.PHONY : test_executor.i
+
+# target to preprocess a source file
+test_executor.cpp.i:
+	cd /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug && $(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/test_executor.cpp.i
+.PHONY : test_executor.cpp.i
+
+test_executor.s: test_executor.cpp.s
+
+.PHONY : test_executor.s
+
+# target to generate assembly for a file
+test_executor.cpp.s:
+	cd /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug && $(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/test_executor.cpp.s
+.PHONY : test_executor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... test_decoder.o"
 	@echo "... test_decoder.i"
 	@echo "... test_decoder.s"
+	@echo "... test_executor.o"
+	@echo "... test_executor.i"
+	@echo "... test_executor.s"
 .PHONY : help
 
 

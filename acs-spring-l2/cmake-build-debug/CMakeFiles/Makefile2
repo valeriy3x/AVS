@@ -54,16 +54,18 @@ CMAKE_BINARY_DIR = /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/riscv_sim.dir/all
+all: units/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/riscv_sim.dir/clean
+clean: units/clean
 
 .PHONY : clean
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: units/preinstall
 
 .PHONY : preinstall
 
@@ -93,6 +95,51 @@ riscv_sim: CMakeFiles/riscv_sim.dir/rule
 CMakeFiles/riscv_sim.dir/clean:
 	$(MAKE) -f CMakeFiles/riscv_sim.dir/build.make CMakeFiles/riscv_sim.dir/clean
 .PHONY : CMakeFiles/riscv_sim.dir/clean
+
+#=============================================================================
+# Directory level rules for directory units
+
+# Recursive "all" directory target.
+units/all: units/CMakeFiles/units_run.dir/all
+
+.PHONY : units/all
+
+# Recursive "clean" directory target.
+units/clean: units/CMakeFiles/units_run.dir/clean
+
+.PHONY : units/clean
+
+# Recursive "preinstall" directory target.
+units/preinstall:
+
+.PHONY : units/preinstall
+
+#=============================================================================
+# Target rules for target units/CMakeFiles/units_run.dir
+
+# All Build rule for target.
+units/CMakeFiles/units_run.dir/all:
+	$(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/depend
+	$(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target units_run"
+.PHONY : units/CMakeFiles/units_run.dir/all
+
+# Build rule for subdir invocation for target.
+units/CMakeFiles/units_run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 units/CMakeFiles/units_run.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/CMakeFiles 0
+.PHONY : units/CMakeFiles/units_run.dir/rule
+
+# Convenience name for target.
+units_run: units/CMakeFiles/units_run.dir/rule
+
+.PHONY : units_run
+
+# clean rule for target.
+units/CMakeFiles/units_run.dir/clean:
+	$(MAKE) -f units/CMakeFiles/units_run.dir/build.make units/CMakeFiles/units_run.dir/clean
+.PHONY : units/CMakeFiles/units_run.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

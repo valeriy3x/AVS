@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/valery3x/Study/AVS/Lab2/acs-spring-l2/units/test_decoder.cpp" "/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/units/CMakeFiles/units_run.dir/test_decoder.cpp.o"
+  "/home/valery3x/Study/AVS/Lab2/acs-spring-l2/units/test_executor.cpp" "/home/valery3x/Study/AVS/Lab2/acs-spring-l2/cmake-build-debug/units/CMakeFiles/units_run.dir/test_executor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

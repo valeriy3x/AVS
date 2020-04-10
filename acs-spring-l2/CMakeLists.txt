@@ -10,3 +10,4 @@ file(GLOB SRC
         )
 
 add_executable(riscv_sim ${SRC})
+add_subdirectory(units)

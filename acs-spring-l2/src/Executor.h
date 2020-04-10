@@ -22,8 +22,7 @@ public:
 
         std::optional<Word> result;
 
-        if (firstOperand.has_value() && secondOperand.has_value())
-        {
+        if (firstOperand && secondOperand){
             Word firstOpVal = firstOperand.value();
             Word secondOpVal = secondOperand.value();
             switch (instr->_aluFunc) {
@@ -69,9 +68,8 @@ public:
                 }
             }
         }
-        if (instr->_type == IType::Ld || instr->_type == IType::St)
+        if ((instr->_type == IType::Ld || instr->_type == IType::St) && result)
         {
-            if(result)
                 instr->_addr = result.value();
         }
 
@@ -88,7 +86,7 @@ public:
         else if(result)
                 instr->_data = result.value();
 
-        if(firstOperand && secondOperand) {
+        if(instr->_src1 && instr->_src2 && !instr->_imm) {
             bool transCondition = 0;
             switch (instr->_brFunc) {
                 case BrFunc::Eq: {
@@ -139,9 +137,8 @@ public:
                     break;
                 }
                 case IType::Jr: {
-                    if (transCondition) {
-                        Word shift = add(instr->_imm.value(), firstOperand.value());
-                        instr->_nextIp = add(shift, ip);
+                    if (transCondition){
+                        instr->_nextIp = add(instr->_imm.value(), firstOperand.value());
                     }
                     break;
                 }
