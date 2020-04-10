@@ -25,8 +25,8 @@ public:
         _exe.Execute(instr, _ip);
         _csrf.InstructionExecuted();
         _mem.Request(instr);
-        _rf.Write(instr);
         _csrf.Write(instr);
+        _rf.Write(instr);
         _ip = instr->_nextIp;
     }
 

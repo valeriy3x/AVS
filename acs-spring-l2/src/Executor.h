@@ -20,7 +20,7 @@ public:
         else if (instr->_src2.has_value())
                 secondOperand = instr->_src2Val;
 
-        Word result;
+        std::optional<Word> result;
 
         if (firstOperand.has_value() && secondOperand.has_value())
         {
@@ -71,7 +71,8 @@ public:
         }
         if (instr->_type == IType::Ld || instr->_type == IType::St)
         {
-            instr->_addr = result;
+            if(result)
+                instr->_addr = result.value();
         }
 
         if (instr->_type == IType::Csrr)
@@ -84,67 +85,66 @@ public:
             instr->_data = add(ip, 4);
         else if (instr->_type == IType::Auipc)
             instr->_data = add(ip, instr->_imm.value());
-        else
-            instr->_data = result;
+        else if(result)
+                instr->_data = result.value();
 
-        bool transCondition = 0;
-
-        switch(instr->_brFunc)
-        {
-            case BrFunc::Eq:{
-                if(firstOperand.value() == secondOperand.value())
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::Neq:{
-                if(firstOperand.value() != secondOperand.value())
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::Lt:{
-                if(SignedWord(firstOperand.value()) < SignedWord(secondOperand.value()))
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::Ltu:{
-                if(firstOperand.value() < secondOperand.value())
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::Ge:{
-                if(SignedWord(firstOperand.value()) >= SignedWord(secondOperand.value()))
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::Geu:{
-                if(firstOperand.value() < secondOperand.value())
-                    transCondition = 1;
-                break;
-            }
-            case BrFunc::AT:{
-                transCondition = 1;
-                break;
-            }
-            case BrFunc::NT:{
-                transCondition = 0;
-                break;
-            }
-        }
-
-        switch (instr->_type)
-        {
-            case IType::Br:
-            case IType ::J:{
-                if(transCondition)
-                    instr->_nextIp = add(ip, instr->_imm.value());
-                break;
-            }
-            case IType::Jr:{
-                if(transCondition) {
-                    Word shift = add(instr->_imm.value(), firstOperand.value());
-                    instr->_nextIp = add(shift, ip);
+        if(firstOperand && secondOperand) {
+            bool transCondition = 0;
+            switch (instr->_brFunc) {
+                case BrFunc::Eq: {
+                    if (firstOperand.value() == secondOperand.value())
+                        transCondition = 1;
+                    break;
                 }
-                break;
+                case BrFunc::Neq: {
+                    if (firstOperand.value() != secondOperand.value())
+                        transCondition = 1;
+                    break;
+                }
+                case BrFunc::Lt: {
+                    if (SignedWord(firstOperand.value()) < SignedWord(secondOperand.value()))
+                        transCondition = 1;
+                    break;
+                }
+                case BrFunc::Ltu: {
+                    if (firstOperand.value() < secondOperand.value())
+                        transCondition = 1;
+                    break;
+                }
+                case BrFunc::Ge: {
+                    if (SignedWord(firstOperand.value()) >= SignedWord(secondOperand.value()))
+                        transCondition = 1;
+                    break;
+                }
+                case BrFunc::Geu: {
+                    if (firstOperand.value() < secondOperand.value())
+                        transCondition = 1;
+                    break;
+                }
+                case BrFunc::AT: {
+                    transCondition = 1;
+                    break;
+                }
+                case BrFunc::NT: {
+                    transCondition = 0;
+                    break;
+                }
+            }
+
+            switch (instr->_type) {
+                case IType::Br:
+                case IType::J: {
+                    if (transCondition)
+                        instr->_nextIp = add(ip, instr->_imm.value());
+                    break;
+                }
+                case IType::Jr: {
+                    if (transCondition) {
+                        Word shift = add(instr->_imm.value(), firstOperand.value());
+                        instr->_nextIp = add(shift, ip);
+                    }
+                    break;
+                }
             }
         }
 
